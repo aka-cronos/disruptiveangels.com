@@ -1,0 +1,31 @@
+{
+  "name": "disruptive-angels",
+  "version": "1.0.0",
+  "description": "Redesign website",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-stylus": "^2.1.0",
+    "gulp-uglify": "^1.4.2",
+    "lost": "^6.6.2",
+    "rucksack-css": "^0.8.5",
+    "rupture": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DisruptiveAngels/new-disruptiveangels.com.git"
+  },
+  "author": "Jorge Escamilla a.k.a. Cronos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DisruptiveAngels/new-disruptiveangels.com/issues"
+  },
+  "homepage": "https://github.com/DisruptiveAngels/new-disruptiveangels.com#readme"
+}
