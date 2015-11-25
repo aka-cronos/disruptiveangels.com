@@ -50,7 +50,7 @@ gulp.task('styles', function(){
     autoprefixer ({browsers:['last 2 version']})
   ];
 
-  gulp.src('css/styles.styl')
+  gulp.src('css/stylus/styles.styl')
       .pipe(stylus({
         compress: false,
         use: [rupture()]
