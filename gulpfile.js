@@ -35,10 +35,11 @@ gulp.task('html', function (){
 // Scripts Task
 // Uglifies javascript
 gulp.task('scripts', function(){
-  gulp.src('js/*.js')
+  gulp.src('scripts/*.js')
       .pipe(uglify())
       .on('error', errorLog)
-      .pipe(gulp.dest('minjs'));
+      .pipe(gulp.dest('scripts/minjs/'))
+      .pipe(livereload());     
 });
 
 // Styles Task
@@ -66,8 +67,8 @@ gulp.task('watch', function(){
   livereload.listen();
 
   gulp.watch('./**/*.html', ['html']);
-  gulp.watch('js/*.js', ['scripts']);
-  gulp.watch('css/stylus/**/*.styl', ['styles']);
+  gulp.watch('scripts/*.js', ['scripts']);
+  gulp.watch('css/stylus/*/*.styl', ['styles']);
 });
 
 gulp.task('default', ['connect', 'scripts', 'styles', 'watch']);

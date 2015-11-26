@@ -1,3 +1,26 @@
 .main-header
   position fixed
-  display none
+  display flex
+  align-items center
+  justify-content space-between
+  width 100%
+  wrapped()
+
+.js-main-header__static
+  transition 350ms all ease
+  background-color rgba(white, .95)
+  shadow()
+
+  .logo-svg
+    fill $principal
+
+  .nav-link
+    color $principal
+
+    &:before
+      content ''
+      background-color $principal
+
+    &__active
+      color $secondary
+      font-weight 600

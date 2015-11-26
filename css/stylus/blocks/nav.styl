@@ -1,0 +1,35 @@
+.nav
+  
+  ul
+    display flex
+    margin 0
+    padding 0
+    list-style none
+
+.nav-item
+  margin-left .75rem
+  margin-right .75rem
+
+.nav-link
+  position relative
+  display block
+  overflow hidden
+  padding 40px 1rem
+  color white
+  text-decoration none
+  cursor pointer
+  transition 600ms all ease
+  
+  &:before
+    position absolute
+    right 0
+    bottom 0
+    left 0
+    display block
+    background-color white
+    content ''
+
+  &:hover:before
+  &__active:before
+    height 4px
+    content ''
