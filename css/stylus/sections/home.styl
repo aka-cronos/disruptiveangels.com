@@ -1,6 +1,63 @@
-.main
+.home-main
+  display flex
   height 100vh
+  justify-content center
+  align-items center
   background url('/img/main-bg.jpg') center no-repeat
   background-size cover
+  wrapped()
   text-align center
-  lost-utility clearfix
+  
+  div
+    lost-column 8/12
+  
+  .title__main
+  .sub-title__main
+    @extend $text-white
+    
+.home-about
+  display flex
+  align-items center
+  height 80vh
+  wrapped-left()
+  
+  .text-container
+    lost-column 5/12
+    lost-offset 1/12
+    
+  figure
+    lost-column 1/2
+
+
+.home-services
+  display flex
+  
+  .title-tag
+    color white
+    
+  &--description
+    wrapped(70%)
+    font-family 'velino', serif
+    margin-top 0
+    margin-bottom 0
+    font-size 1.75rem
+    line-height 1.5
+
+.home-startups
+.home-dips
+  display flex
+  flex-direction column
+  justify-content center
+  min-height 400px
+  width 50%
+  text-decoration none
+  @extend $text-center
+  @extend $text-white
+  
+.home-startups
+  background url('/img/home-startups.jpg') center no-repeat
+  background-size cover
+
+.home-dips
+  background url('/img/home-dips.jpg') center no-repeat
+  background-size cover
