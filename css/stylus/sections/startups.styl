@@ -1,0 +1,32 @@
+.startups-main
+  display flex
+  align-items center
+  height 100vh
+  
+  &--image
+  .text-container
+    width 50%
+    lost-column 1/2 2 0
+    
+  .text-container
+    lost-column 5/12 0 0
+    lost-offset 1/12 row 0
+    wrapped-left()
+
+    
+  &--image
+    height 100vh
+    background url('/img/startups-main.jpg') center no-repeat
+    background-size cover
+    
+.startups-container
+  margin-top 6rem
+  margin-bottom 6rem
+  wrapped()
+  
+.startup-name
+  @extend .title
+  margin-bottom 1rem
+  
+.startup--type
+  @extend .title-tag
