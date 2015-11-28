@@ -2,6 +2,7 @@
   display flex
   align-items center
   height 100vh
+  background-color rgba($principal, .05)
   
   &--image
   .text-container
@@ -12,8 +13,7 @@
     lost-column 5/12 0 0
     lost-offset 1/12 row 0
     wrapped-left()
-
-    
+  
   &--image
     height 100vh
     background url('/img/startups-main.jpg') center no-repeat
@@ -24,9 +24,12 @@
   margin-bottom 6rem
   wrapped()
   
-.startup-name
-  @extend .title
-  margin-bottom 1rem
-  
-.startup--type
-  @extend .title-tag
+  :nth-child(even) .startup--info
+    order 2
+    
+    &:before
+      right 0
+      left -5rem
+    
+  :nth-child(even) .startup--image
+    order 1

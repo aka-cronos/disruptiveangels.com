@@ -1,0 +1,38 @@
+.startup
+  display flex
+  align-items center
+  position relative
+  margin-top 6rem
+  margin-bottom 6rem
+
+.startup--info
+  position relative
+  padding 2rem 5rem
+  lost-column 7/12 12 0
+  
+  &:before
+    position absolute
+    top 0
+    right -5rem
+    bottom 0
+    left 0
+    content ''
+    border 1px solid rgba($secondary, .4)
+    z-index -1
+
+  .btn__principal
+    margin-top 1rem
+
+.startup-name
+  margin-bottom 1rem
+  @extend .title
+
+.startup--type
+  @extend .title-tag
+
+.startup--image
+  z-index -2
+  overflow hidden
+  border-radius 4px
+  shadow()
+  lost-column 5/12
