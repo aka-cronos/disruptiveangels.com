@@ -345,6 +345,56 @@ figure img {
   border: 1px solid #469cb6;
   padding: 1.3em 3em;
 }
+.social-icons {
+  display: block;
+  width: 25px;
+}
+.social-icons img {
+  display: block;
+  height: 100%;
+  opacity: 0.5;
+  transition: 300ms all ease-in-out;
+}
+.social-icons img:hover {
+  opacity: 1;
+}
+.clients-logos {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 6rem;
+  width: 100%;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.clients-logos a {
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: 350ms all ease-in-out;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: calc(99.99% * 2/12 - (2.5rem - 2.5rem * 2/12));
+}
+.clients-logos a:nth-child(n) {
+  margin-right: 2.5rem;
+}
+.clients-logos a:last-child {
+  margin-right: 0;
+}
+.clients-logos a:nth-child(0n) {
+  margin-right: 0;
+}
+.clients-logos a img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+.clients-logos a:hover {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+}
 .main-header {
   position: fixed;
   display: -webkit-flex;
@@ -446,6 +496,42 @@ figure img {
   margin-right: 0;
 }
 .startup--image:nth-child(12n) {
+  margin-right: 0;
+}
+footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid rgba(70,156,182,0.5);
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #5b667b;
+  font-family: 'velino', serif;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.social > * {
+  margin-right: 1.5rem;
+}
+.social > *:last-child {
   margin-right: 0;
 }
 .home-main {
@@ -560,6 +646,13 @@ figure img {
 .home-dips {
   background: url("/img/home-dips.jpg") center no-repeat;
   background-size: cover;
+}
+.home-press {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  padding-left: calc(50% - (1120px / 2));
+  padding-right: calc(50% - (1120px / 2));
+  text-align: center;
 }
 .startups-main {
   display: -webkit-flex;
