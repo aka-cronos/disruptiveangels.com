@@ -1,0 +1,33 @@
+.testimonies
+  position relative
+  margin-top 6rem
+  margin-right auto
+  margin-left auto
+  max-width 60%
+  lost-utility clearfix
+  
+  &:before
+  &:after
+    position absolute
+    z-index -1
+    content url(/img/quotes.svg)
+    opacity .5
+  
+  &:before
+    top -30px
+    left -44px
+
+  &:after
+    right -44px
+    bottom 0
+    transform rotate(180deg)
+
+.testimony
+  @extend .text
+  font-size 1.25rem
+  font-style italic
+  
+  &--author
+    color $principal
+    font-family 'velino', serif
+    font-style italic

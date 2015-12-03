@@ -179,21 +179,26 @@ th {
 .home-main .title__main,
 .home-main .sub-title__main,
 .home-startups,
-.home-dips {
+.home-dips,
+.home-direction .title,
+.home-direction .text {
   color: #fff;
 }
 .home-startups,
-.home-dips {
+.home-dips,
+.home-testimonies .title,
+.home-direction {
   text-align: center;
 }
 .text,
-.sub-title__main {
+.sub-title__main,
+.testimony {
   font-size: 1.125rem;
   color: #5b667b;
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.6;
-  font-weight: 200;
+  font-weight: 300;
 }
 .title,
 .title__main,
@@ -327,17 +332,19 @@ figure img {
 .logo-header {
   max-width: 165px;
 }
-.btn,
-.btn__principal {
-  text-decoration: none;
+.btn {
   display: inline-block;
   border-radius: 4px;
+  text-decoration: none;
 }
-.btn__principal,
-.btn__principal__principal {
+.btn__principal {
   color: #469cb6;
   border: 1px solid #469cb6;
-  padding: 1.3em 3em;
+  padding: 1em 3em;
+}
+.btn__white {
+  border-color: #fff;
+  color: #fff;
 }
 .social-icons {
   display: block;
@@ -369,7 +376,7 @@ figure img {
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: calc(99.99% * 2/12 - (2.5rem - 2.5rem * 2/12));
+  width: calc(99.99% * 2.3/12 - (2.5rem - 2.5rem * 2.3/12));
 }
 .clients-logos a:nth-child(n) {
   margin-right: 2.5rem;
@@ -388,6 +395,49 @@ figure img {
 }
 .clients-logos a:hover {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+}
+.testimonies {
+  position: relative;
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 60%;
+  *zoom: 1;
+}
+.testimonies:before {
+  content: '';
+  display: table;
+}
+.testimonies:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.testimonies:before,
+.testimonies:after {
+  position: absolute;
+  z-index: -1;
+  content: url("/img/quotes.svg");
+  opacity: 0.5;
+}
+.testimonies:before {
+  top: -30px;
+  left: -44px;
+}
+.testimonies:after {
+  right: -44px;
+  bottom: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.testimony {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.testimony--author {
+  color: #469cb6;
+  font-family: 'velino', serif;
+  font-style: italic;
 }
 .main-header {
   position: fixed;
@@ -640,6 +690,29 @@ footer {
 .home-dips {
   background: url("/img/home-dips.jpg") center no-repeat;
   background-size: cover;
+}
+.home-testimonies {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: calc(50% - (1120px / 2));
+  padding-right: calc(50% - (1120px / 2));
+}
+.home-direction {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55vh;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("/img/home-direction.jpg") center no-repeat;
+  background-size: cover;
+}
+.home-direction .btn {
+  margin-top: 1rem;
 }
 .home-press {
   margin-top: 8rem;
