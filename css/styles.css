@@ -187,7 +187,8 @@ th {
 .home-startups,
 .home-dips,
 .home-testimonies .title,
-.home-direction {
+.home-direction,
+.dip-why {
   text-align: center;
 }
 .text,
@@ -290,6 +291,18 @@ figure img {
   width: 100%;
   display: block;
 }
+.separator {
+  border-top: 1px solid rgba(70,156,182,0.5);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .nav ul {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -297,6 +310,11 @@ figure img {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media only screen and (max-width: 68rem) {
+  .nav {
+    display: none;
+  }
 }
 .nav-item {
   margin-left: 0.75rem;
@@ -606,7 +624,6 @@ figure img {
 footer {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  border-top: 1px solid rgba(70,156,182,0.5);
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -656,19 +673,19 @@ footer {
   padding-right: calc(50% - (1120px / 2));
   text-align: center;
 }
-.home-main div {
+.home-main .text-container {
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   width: calc(99.99% * 8/12 - (16px - 16px * 8/12));
 }
-.home-main div:nth-child(n) {
+.home-main .text-container:nth-child(n) {
   margin-right: 16px;
 }
-.home-main div:last-child {
+.home-main .text-container:last-child {
   margin-right: 0;
 }
-.home-main div:nth-child(12n) {
+.home-main .text-container:nth-child(12n) {
   margin-right: 0;
 }
 .home-about {
@@ -678,7 +695,7 @@ footer {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80vh;
+  min-height: 80vh;
   padding-left: calc(50% - (1120px / 2));
 }
 .home-about .text-container {
@@ -809,4 +826,30 @@ footer {
 .header-image--innovation-process {
   background: url("/img/startups-main.jpg") center no-repeat;
   background-size: cover;
+}
+.dip-why {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  padding-left: calc(50% - (1120px / 2));
+  padding-right: calc(50% - (1120px / 2));
+}
+.dip-why .text-container {
+  *zoom: 1;
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dip-why .text-container:before {
+  content: '';
+  display: table;
+}
+.dip-why .text-container:after {
+  content: '';
+  display: table;
+  clear: both;
 }
