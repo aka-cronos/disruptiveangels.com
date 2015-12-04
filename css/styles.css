@@ -393,11 +393,11 @@ figure img {
   margin-left: auto;
   width: 100%;
 }
-.clients-logos a:hover {
+.clients-logos a:hover,
+.clients-logos .selected {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
 }
 .testimonies {
-  position: relative;
   margin-top: 6rem;
   margin-right: auto;
   margin-left: auto;
@@ -438,6 +438,15 @@ figure img {
   color: #469cb6;
   font-family: 'velino', serif;
   font-style: italic;
+}
+.hidden {
+  display: none;
+}
+.slides-container {
+  position: relative;
+}
+.slides {
+  position: absolute;
 }
 .main-header {
   position: fixed;

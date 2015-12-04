@@ -1,1 +1,1 @@
-$(document).ready(function(){var a=$(".main-header");$(window).on("scroll",function(){$("html").hasClass("sb-active")||a.toggleClass("js-main-header__static",$(window).scrollTop()>0)})});
+$(document).ready(function(){var s=$(".main-header");$(window).on("scroll",function(){$("html").hasClass("sb-active")||s.toggleClass("js-main-header__static",$(window).scrollTop()>0)}),$("#client-slider").slide()});

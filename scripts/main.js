@@ -7,4 +7,5 @@ $(document).ready(function () {
       $(window).scrollTop() > 0);
     }
   });
+  $('#client-slider').slide();
 });
