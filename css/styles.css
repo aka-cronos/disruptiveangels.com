@@ -457,7 +457,6 @@ figure img {
   font-family: 'velino', serif;
   font-style: italic;
 }
-<<<<<<< 6fbf820cdc4c336de027265052bc52841cad4906
 .hidden {
   display: none;
 }
@@ -466,7 +465,7 @@ figure img {
 }
 .slides {
   position: absolute;
-=======
+}
 .header {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -516,7 +515,6 @@ figure img {
 }
 .header-image {
   height: 100vh;
->>>>>>> Refactor header section
 }
 .main-header {
   position: fixed;
