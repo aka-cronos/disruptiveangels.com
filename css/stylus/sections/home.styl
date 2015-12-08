@@ -9,7 +9,7 @@
   text-align center
   
   .text-container
-    lost-column 8/12
+    lost-column 8.5/12
   
   .title__main
   .sub-title__main
@@ -44,19 +44,38 @@
 
 .home-startups
 .home-dips
+  position relative
   display flex
   flex-direction column
   justify-content center
+  overflow hidden
   min-height 400px
   width 50%
   text-decoration none
   @extend $text-center
   @extend $text-white
+  transition 500ms all ease-in-out
   
+  &:before
+    position absolute
+    top -2rem
+    right -2rem
+    bottom -2rem
+    left -2rem
+    border 2px solid white
+    content ''
+    transition inherit
+    
+  &:hover:before
+    top 2rem
+    right 2rem
+    bottom 2rem
+    left 2rem
+
 .home-startups
   background url('/img/home-startups.jpg') center no-repeat
   background-size cover
-
+    
 .home-dips
   background url('/img/home-dips.jpg') center no-repeat
   background-size cover
