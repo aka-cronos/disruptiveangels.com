@@ -7,5 +7,8 @@ $(document).ready(function () {
       $(window).scrollTop() > 0);
     }
   });
-  $('#client-slider').slide();
+  $('#client-slider').slide(
+    slideShow : true,
+    speed : 500
+  );
 });
