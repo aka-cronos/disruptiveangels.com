@@ -1,0 +1,58 @@
+.steps-container
+  wrapped()
+  
+  :nth-child(even) .dip-step--image
+    order 1
+    lost-offset .5/12
+
+  :nth-child(even) .dip-step--info
+    order 2
+    lost-offset 0
+
+.dip-step
+  // position relative
+  display flex
+  align-items center
+  justify-content center
+  margin-bottom 8rem
+  
+  // &:before
+  //   position absolute
+  //   right 30%
+  //   bottom -150px
+  //   font-family 'velino', serif
+  //   color rgba($black, .15)
+  //   font-size 15rem
+  //   content ''
+  
+  &--info
+    lost-column 6/12 0 0
+    lost-offset .5/12
+    
+    .title
+      margin-bottom 1rem
+  
+  &--image
+    overflow hidden
+    border-radius 4px
+    shadow()
+    lost-column 4/12 0 0  
+    
+    img
+      display block
+      
+
+// .step-01:before
+//   content '01'
+  
+// .step-02:before
+//   content '02'
+
+// .step-03:before
+//   content '03'
+  
+// .step-04:before
+//   content '04'
+  
+// .step-05:before
+//   content '05'
