@@ -10,6 +10,11 @@
   
   .text-container
     lost-column 8.5/12
+    
+    +below(48rem)
+      width 100%
+      wrapped(90%)
+      
   
   .title__main
   .sub-title__main
@@ -21,15 +26,30 @@
   min-height 80vh
   wrapped-left()
   
+  +below(48rem)
+    flex-direction column
+    padding-top 6rem
+    padding-bottom 6rem
+  
   .text-container
-    lost-column 5/12
-    lost-offset 1/12
+    
+    +above(48rem)
+      lost-column 5/12
+      lost-offset 1/12
+
+    +below(48rem)
+      wrapped(90%)
 
   figure
-    lost-column 1/2
-
+    
+    +above(48rem)
+      lost-column 1/2
+    
 .home-services
   display flex
+  
+  +below(48rem)
+    flex-direction column
   
   .title-tag
     color white
@@ -50,12 +70,14 @@
   justify-content center
   overflow hidden
   min-height 400px
-  width 50%
   text-decoration none
   @extend $text-center
   @extend $text-white
   transition 500ms all ease-in-out
   
+  +above(48rem)
+    width 50%
+
   &:before
     position absolute
     top -2rem

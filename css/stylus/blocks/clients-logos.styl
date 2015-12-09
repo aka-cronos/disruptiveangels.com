@@ -3,6 +3,10 @@
   margin-top 6rem
   width 100%
   justify-content center
+  
+  +below(48rem)
+    flex-direction column
+    wrapped(90%)
 
   a
     padding .5rem
@@ -10,11 +14,17 @@
     margin-left 1.5rem
     border-radius 4px
     transition 350ms all ease-in-out
+    
+    +below(48rem)
+      display block
+      margin-bottom 1.5rem
 
     img
       display block
       max-height 70px
       width auto
+      margin-left auto
+      margin-right auto
 
   a:hover
   .selected
