@@ -403,7 +403,7 @@ figure img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 6rem;
+  margin-top: 4rem;
   width: 100%;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -443,7 +443,6 @@ figure img {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
 }
 .testimonies {
-  margin-top: 6rem;
   margin-right: auto;
   margin-left: auto;
   max-width: 60%;
@@ -936,7 +935,7 @@ footer {
   background-size: cover;
 }
 .home-testimonies {
-  padding-top: 6rem;
+  padding-top: 8rem;
   padding-bottom: 6rem;
   padding-left: calc(50% - (1120px / 2));
   padding-right: calc(50% - (1120px / 2));
