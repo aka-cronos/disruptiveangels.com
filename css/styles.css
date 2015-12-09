@@ -392,27 +392,15 @@ figure img {
 }
 .clients-logos a {
   padding: 0.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
   border-radius: 4px;
   transition: 350ms all ease-in-out;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  width: calc(99.99% * 2.3/12 - (2.5rem - 2.5rem * 2.3/12));
-}
-.clients-logos a:nth-child(n) {
-  margin-right: 2.5rem;
-}
-.clients-logos a:last-child {
-  margin-right: 0;
-}
-.clients-logos a:nth-child(0n) {
-  margin-right: 0;
 }
 .clients-logos a img {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
+  max-height: 70px;
+  width: auto;
 }
 .clients-logos a:hover,
 .clients-logos .selected {
