@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     rupture = require('rupture'),
     lost = require('lost'),
-    rucksack = require('rucksack-css');
+    rucksack = require('rucksack-css'),
+    imagemin = require('gulp-imagemin');
 
 function errorLog(error){
   console.error.bind(error);
@@ -23,6 +24,7 @@ gulp.task('connect', function(){
     port: 5000
   });
 });
+
 
 // Html Task
 // Reloads html files
@@ -41,6 +43,16 @@ gulp.task('scripts', function(){
       .pipe(gulp.dest('scripts/minjs/'))
       .pipe(livereload());     
 });
+
+
+// Images Task
+// Images optimization
+gulp.task('images', function(){
+  gulp.src('img/*')
+      .pipe(imagemin())
+      .pipe(gulp.dest('img/'));
+});
+
 
 // Styles Task
 // Compile and minify stylus 
@@ -61,6 +73,7 @@ gulp.task('styles', function(){
       .pipe(livereload());
 });
 
+
 // Watch Task
 // Watches files
 gulp.task('watch', function(){
@@ -71,4 +84,4 @@ gulp.task('watch', function(){
   gulp.watch('css/stylus/*/*.styl', ['styles']);
 });
 
-gulp.task('default', ['connect', 'scripts', 'styles', 'watch']);
+gulp.task('default', ['connect', 'scripts', 'styles', 'images', 'watch']);
