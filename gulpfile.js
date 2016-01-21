@@ -1,13 +1,13 @@
 var gulp = require('gulp'),
+    livereload = require('gulp-livereload'),
     connect = require('gulp-connect'),
     postcss = require('gulp-postcss'),
-    uglify = require('gulp-uglify'),
     stylus = require('gulp-stylus'),
-    livereload = require('gulp-livereload'),
-    autoprefixer = require('autoprefixer'),
     rupture = require('rupture'),
     lost = require('lost'),
     rucksack = require('rucksack-css'),
+    autoprefixer = require('autoprefixer'),
+    uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin');
 
 function errorLog(error){
@@ -84,4 +84,4 @@ gulp.task('watch', function(){
   gulp.watch('css/stylus/*/*.styl', ['styles']);
 });
 
-gulp.task('default', ['connect', 'scripts', 'styles', 'images', 'watch']);
+gulp.task('default', ['connect', 'scripts', 'styles', 'watch']);
