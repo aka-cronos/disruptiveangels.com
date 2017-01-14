@@ -112,19 +112,25 @@
 
 .home-direction
   display flex
-  height 55vh
-  align-items center
-  justify-content center
+  padding-top 6rem
+  padding-bottom 6rem
   background url('/img/home-direction.jpg') center no-repeat
   background-size cover
+  flex-direction column
   @extend $text-center
+  wrapped()
   
   .title
   .text
+  .title-tag
     @extend $text-white
     
-  .btn
-    margin-top 1rem
+  .title-tag
+    margin-bottom 1rem
+    
+  &-cities
+    display flex
+    justify-content space-around
 
 .home-press
   margin-top 8rem

@@ -181,7 +181,8 @@ th {
 .home-startups,
 .home-dips,
 .home-direction .title,
-.home-direction .text {
+.home-direction .text,
+.home-direction .title-tag {
   color: #fff;
 }
 .testimonies,
@@ -236,6 +237,7 @@ th {
   margin-top: 0;
   margin-bottom: 2rem;
   letter-spacing: 0.4rem;
+  text-transform: uppercase;
 }
 *,
 :before,
@@ -927,16 +929,23 @@ footer {
 .home-direction {
   display: -ms-flexbox;
   display: flex;
-  height: 55vh;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   background: url("/img/home-direction.jpg") center no-repeat;
   background-size: cover;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding-left: calc(50% - (1120px / 2));
+  padding-right: calc(50% - (1120px / 2));
 }
-.home-direction .btn {
-  margin-top: 1rem;
+.home-direction .title-tag {
+  margin-bottom: 1rem;
+}
+.home-direction-cities {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .home-press {
   margin-top: 8rem;
