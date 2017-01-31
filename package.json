@@ -12,8 +12,8 @@
     "gulp-postcss": "^6.1.1",
     "gulp-stylus": "^2.5.0",
     "gulp-uglify": "^2.0.0",
-    "lost": "^7.1.0",
-    "rucksack-css": "^0.8.6",
+    "lost": "^8.0.0",
+    "rucksack-css": "^0.9.1",
     "rupture": "^0.6.1"
   },
   "scripts": {
