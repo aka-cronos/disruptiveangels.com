@@ -206,7 +206,9 @@ th {
 }
 .title,
 .title__main,
-.startup-name {
+.startup-name,
+.member-profile-name,
+.member-profile-quote {
   font-family: 'velino', serif;
   color: #469cb6;
   margin-top: 0;
@@ -231,7 +233,8 @@ th {
   line-height: 1.4;
   font-size: 1.375rem;
 }
-.title-tag {
+.title-tag,
+.member-profile-title {
   font-size: 1rem;
   color: rgba(91,102,123,0.3);
   margin-top: 0;
@@ -779,6 +782,72 @@ footer {
 }
 .social > *:last-child {
   margin-right: 0;
+}
+.basic-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #0a2a43;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.member-profile-container {
+  width: 90%;
+  max-height: 800px;
+  height: 80vh;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.member-profile-info {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  width: 50%;
+}
+.member-profile-photo {
+  width: 50%;
+  height: 100%;
+  background: url("/img/team/team-francis.jpg") center no-repeat;
+  background-size: cover;
+}
+.member-profile-name {
+  margin-bottom: 0;
+  color: #0a2a43;
+}
+.member-profile-quote {
+  font-style: italic;
+  font-size: calc(12px + 9 * ((100vw - 420px) / 860));
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1280px) {
+  .member-profile-quote {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .member-profile-quote {
+    font-size: 12px;
+  }
+}
+.member-profile-socialMedia {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.member-profile-socialMedia img {
+  display: block;
+}
+.socialMedia-icon {
+  margin-right: 2rem;
 }
 .home-main {
   padding-left: calc(50% - (1120px / 2));
