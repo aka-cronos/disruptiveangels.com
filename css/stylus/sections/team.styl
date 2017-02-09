@@ -1,0 +1,68 @@
+.team-hero
+  wrapped()
+  padding-top 100px
+  display flex
+  height 700px
+  justify-content center
+  align-items center
+  background-size cover
+  text-align center
+  
+  +above(1440px)
+    height 70vh
+  
+  .text-container
+    lost-column 8/12
+    
+    +below(48rem)
+      wrapped(90%)
+      width 100%
+      
+.team-container
+  wrapped()
+  display flex
+  flex-wrap wrap
+  margin-bottom 6rem
+  
+.team-member
+  lost-waffle 1/4 4 flex
+  border-radius 5px
+  overflow hidden
+  position relative
+  text-decoration none
+  color inherit
+  transition all 250ms ease-in-out
+  
+  &:hover .team-member-info
+    transform translateY(-1rem)
+  
+  &-photo
+    padding 0
+    margin 0
+    
+  &-info
+    position absolute
+    padding 1rem
+    bottom 0
+    left 1rem
+    transform translateY(100%)
+    width calc(100% - 2rem)
+    background-color white
+    transition all 250ms ease-in-out
+    text-align center
+    
+  &-name
+    font-family 'velino', serif
+    margin 0
+    font-weight normal
+    font-size 1.5rem
+    color #0A2A43
+    
+  &-title
+    margin 0
+    font-size .75rem
+    text-transform uppercase
+    font-weight 600
+    letter-spacing 3.5px
+    color rgba(#0A2A43, .5)
+
