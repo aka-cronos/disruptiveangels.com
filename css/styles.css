@@ -242,6 +242,23 @@ th {
   letter-spacing: 0.4rem;
   text-transform: uppercase;
 }
+.featherlight:last-of-type {
+  background: rgba(10,42,67,0.95);
+}
+.featherlight .featherlight-content {
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0;
+  border-bottom: 0;
+}
+.featherlight .featherlight-inner {
+  display: -ms-flexbox;
+  display: flex;
+}
+.featherlight .featherlight-close-icon {
+  background: none;
+  color: #fff;
+}
 *,
 :before,
 :after {
@@ -795,14 +812,8 @@ footer {
       justify-content: center;
 }
 .member-profile-container {
-  width: 90%;
   max-height: 800px;
   height: 80vh;
-  background-color: #fff;
-  overflow: hidden;
-  border-radius: 5px;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -814,8 +825,6 @@ footer {
 .member-profile-photo {
   width: 50%;
   height: 100%;
-  background: url("/img/team/team-francis.jpg") center no-repeat;
-  background-size: cover;
 }
 .member-profile-name {
   margin-bottom: 0;
@@ -848,6 +857,54 @@ footer {
 }
 .socialMedia-icon {
   margin-right: 2rem;
+}
+.profile-fede .member-profile-photo {
+  background: url("/img/team/team-fede.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-adrian .member-profile-photo {
+  background: url("/img/team/team-adrian.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-flores .member-profile-photo {
+  background: url("/img/team/team-flores.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-cronos .member-profile-photo {
+  background: url("/img/team/team-cronos.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-paola .member-profile-photo {
+  background: url("/img/team/team-paola.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-alan .member-profile-photo {
+  background: url("/img/team/team-alan.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-francis .member-profile-photo {
+  background: url("/img/team/team-francis.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-mike .member-profile-photo {
+  background: url("/img/team/team-mike.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-baruc .member-profile-photo {
+  background: url("/img/team/team-baruc.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-pepo .member-profile-photo {
+  background: url("/img/team/team-pepo.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-valentin .member-profile-photo {
+  background: url("/img/team/team-valentin.jpg") center no-repeat;
+  background-size: cover;
+}
+.profile-esau .member-profile-photo {
+  background: url("/img/team/team-esau.jpg") center no-repeat;
+  background-size: cover;
 }
 .home-main {
   padding-left: calc(50% - (1120px / 2));
@@ -1113,7 +1170,7 @@ footer {
   padding-top: 100px;
   display: -ms-flexbox;
   display: flex;
-  height: 700px;
+  min-height: 700px;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
