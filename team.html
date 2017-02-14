@@ -217,6 +217,8 @@
   <div class="separator">
   </div>
 
+  <div id="instafeed"></div>
+
   <footer>
     <p>© 2017 Disruptive Angels - All rights Reserved</p>
 
@@ -237,8 +239,21 @@
     </div>
   </footer>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
-  <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>  
+  <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.0/release/featherlight.min.js" type="text/javascript"></script>
+  <script src="/scripts/instafeed.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: '1255036703',
+        accessToken: '1255036703.03d2c4c.ce82a84f7af0417e9878a32907e1aaa2',
+        limit: '7',
+        resolution: 'low_resolution'
+    });
+    userFeed.run();
+</script>
+
+
 
 </body>
 </html>
