@@ -1,0 +1,107 @@
+.basic-container
+  width 100%
+  height 100vh
+  background-color #0A2A43
+  display flex
+  align-items center
+  justify-content center
+  
+.member-profile
+  
+  &-container
+    max-height 800px
+    height 80vh
+    align-items center
+    overflow auto
+    
+    +below(48rem)
+      justify-content center
+
+  &-info
+    padding-left 3rem
+    padding-right 3rem
+    width 50%
+
+    +below(48rem)
+      width 100%
+      padding 2rem
+    
+  &-photo
+    width 50%
+    height 100%
+
+    +below(48rem)
+      display none
+  
+  &-name
+    @extend .title
+    margin-bottom 0
+    color #0A2A43
+    
+  &-title
+    @extend .title-tag
+    
+  &-quote
+    @extend .title
+    font-style italic
+    font-size responsive 1.5rem 1.5rem
+    margin-bottom 2rem
+    
+  &-socialMedia
+    display flex
+    margin-top 2rem
+    align-items center
+    
+    .social-icons
+      width 30px
+          
+.socialMedia-icon
+  margin-right 2rem
+  
+.profile-fede .member-profile-photo
+  background url('/img/team/team-fede-full.jpg') center no-repeat
+  background-size cover
+
+.profile-adrian .member-profile-photo
+  background url('/img/team/team-adrian-full.jpg') center no-repeat
+  background-size cover
+
+.profile-flores .member-profile-photo
+  background url('/img/team/team-flores-full.jpg') center no-repeat
+  background-size cover
+
+.profile-cronos .member-profile-photo
+  background url('/img/team/team-cronos-full.jpg') center no-repeat
+  background-size cover
+
+.profile-paola .member-profile-photo
+  background url('/img/team/team-paola-full.jpg') center no-repeat
+  background-size cover
+
+.profile-alan .member-profile-photo
+  background url('/img/team/team-alan-full.jpg') center no-repeat
+  background-size cover
+
+.profile-francis .member-profile-photo
+  background url('/img/team/team-francis-full.jpg') center no-repeat
+  background-size cover
+
+.profile-mike .member-profile-photo
+  background url('/img/team/team-mike-full.jpg') center no-repeat
+  background-size cover
+
+.profile-baruc .member-profile-photo
+  background url('/img/team/team-baruc-full.jpg') center no-repeat
+  background-size cover
+  
+.profile-pepo .member-profile-photo
+  background url('/img/team/team-pepo-full.jpg') center no-repeat
+  background-size cover
+
+.profile-valentin .member-profile-photo
+  background url('/img/team/team-valentin-full.jpg') center no-repeat
+  background-size cover
+  
+.profile-esau .member-profile-photo
+  background url('/img/team/team-esau-full.jpg') center no-repeat
+  background-size cover
