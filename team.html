@@ -210,14 +210,15 @@
   <div class="separator">
   </div>
 
-  <section class="home-press">
+  <section class="instafeed">
     <h3 class="title">We never stop having fun</h3>
+
+    <div id="instafeed-container" class="instafeed-container"></div>
   </section>
 
   <div class="separator">
   </div>
 
-  <div id="instafeed"></div>
 
   <footer>
     <p>© 2017 Disruptive Angels - All rights Reserved</p>
@@ -248,7 +249,8 @@
         userId: '1255036703',
         accessToken: '1255036703.03d2c4c.ce82a84f7af0417e9878a32907e1aaa2',
         limit: '7',
-        resolution: 'low_resolution'
+        resolution: 'standard_resolution',
+        target: 'instafeed-container'
     });
     userFeed.run();
 </script>

@@ -860,17 +860,17 @@ footer {
 }
 .member-profile-quote {
   font-style: italic;
-  font-size: calc(12px + 9 * ((100vw - 420px) / 860));
+  font-size: calc(1.5rem + 0 * ((100vw - 26.25rem) / 53.75));
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 1280px) {
   .member-profile-quote {
-    font-size: 21px;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 420px) {
   .member-profile-quote {
-    font-size: 12px;
+    font-size: 1.5rem;
   }
 }
 .member-profile-socialMedia {
@@ -933,6 +933,64 @@ footer {
 .profile-esau .member-profile-photo {
   background: url("/img/team/team-esau-full.jpg") center no-repeat;
   background-size: cover;
+}
+.instafeed {
+  margin-top: 8rem;
+  text-align: center;
+}
+@media only screen and (max-width: 48rem) {
+  .instafeed {
+    padding-left: calc(50% - (90% / 2));
+    padding-right: calc(50% - (90% / 2));
+  }
+}
+.instafeed .title {
+  margin-bottom: 8rem;
+}
+.instafeed-container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.instafeed-container:hover a img {
+  opacity: 0.5;
+}
+.instafeed-container a {
+  width: 20%;
+  float: left;
+  display: block;
+  background-color: #0a2a43;
+}
+@media only screen and (max-width: 38rem) {
+  .instafeed-container a {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 28rem) {
+  .instafeed-container a {
+    width: 100%;
+  }
+}
+.instafeed-container a:first-of-type {
+  width: 40%;
+}
+@media only screen and (max-width: 38rem) {
+  .instafeed-container a:first-of-type {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 28rem) {
+  .instafeed-container a:first-of-type {
+    width: 100%;
+  }
+}
+.instafeed-container a:hover img {
+  opacity: 1;
+}
+.instafeed-container a img {
+  width: 100%;
+  display: block;
+  transition: 350ms all ease-in-out;
 }
 .home-main {
   padding-left: calc(50% - (1120px / 2));
