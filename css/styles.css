@@ -414,17 +414,15 @@ figure img {
   color: #fff;
 }
 .social-icons {
-  display: block;
+  margin-right: 1.5rem;
   width: 25px;
 }
 .social-icons img {
+  width: 100%;
   display: block;
-  height: 100%;
-  opacity: 0.5;
-  transition: 300ms all ease-in-out;
 }
-.social-icons img:hover {
-  opacity: 1;
+.social-icons:last-child {
+  margin-right: 0;
 }
 .clients-logos {
   display: -ms-flexbox;
@@ -804,11 +802,8 @@ footer {
   -ms-flex-align: center;
       align-items: center;
 }
-.social > * {
-  margin-right: 1.5rem;
-}
-.social > *:last-child {
-  margin-right: 0;
+.social span {
+  margin-right: 1rem;
 }
 .basic-container {
   width: 100%;
@@ -880,8 +875,8 @@ footer {
   -ms-flex-align: center;
       align-items: center;
 }
-.member-profile-socialMedia img {
-  display: block;
+.member-profile-socialMedia .social-icons {
+  width: 30px;
 }
 .socialMedia-icon {
   margin-right: 2rem;
