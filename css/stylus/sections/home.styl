@@ -129,9 +129,21 @@
   &-cities
     display flex
     justify-content space-around
+    
+    +below(50rem)
+      flex-direction column
+      
+.direction-city
+  +below(50rem)
+    & + &
+      margin-top 4rem
 
 .home-press
   margin-top 8rem
   margin-bottom 8rem
   wrapped()
   text-align center
+  
+.text-container
+  +below(48rem)
+    wrapped(90%)
