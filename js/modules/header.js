@@ -8,8 +8,8 @@ $(document).ready(function () {
     }
   });
 
-  $('#client-slider').slide(
+  $('#client-slider').slide({
     slideShow : true,
-    speed : 500
-  );
+    speed : 3000
+  });
 });

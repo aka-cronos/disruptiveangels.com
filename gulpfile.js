@@ -1,87 +1,134 @@
-var gulp = require('gulp'),
-    livereload = require('gulp-livereload'),
-    connect = require('gulp-connect'),
-    postcss = require('gulp-postcss'),
-    stylus = require('gulp-stylus'),
-    rupture = require('rupture'),
-    lost = require('lost'),
-    rucksack = require('rucksack-css'),
-    autoprefixer = require('autoprefixer'),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin');
+// Dependencies
+var gulp          = require('gulp');
+var stylus        = require('gulp-stylus');
+var postcss       = require('gulp-postcss');
+var cssmin        = require('gulp-cssmin');
+var imagemin      = require('gulp-imagemin');
+var rename        = require('gulp-rename');
+var concat        = require('gulp-concat');
+var uglify        = require('gulp-uglify');
+var rupture       = require('rupture');
+var lost          = require('lost');
+var rucksack      = require('rucksack-css');
+var autoprefixer  = require('autoprefixer');
+var browserSync   = require('browser-sync').create();
+var reload        = browserSync.reload;
 
-function errorLog(error){
-  console.error.bind(error);
-  this.emit('end')
-}
+// Paths
+var paths = {
+  html:     './**/*.html',
+  img:      './img/',
+  css:      './css/',
+  js:       './js/',
+  images:   './img/**/*.{JPG,jpg,png,gif}',
+  styles:   './css/stylus/styles.styl',
+  stylus:   './css/stylus/**/*.styl',
+  scripts:  [
+              './js/vendor/*.js',
+              './js/modules/*.js'
+            ]
+};
 
-
-// Connect Task
-// Uglifies javascript
-gulp.task('connect', function(){
-  connect.server({
-    livereload: true,
-    port: 5000
+// server task - Run server
+gulp.task('server', function() {
+  browserSync.init({
+    server: {
+        baseDir: "./"
+    },
+    port: 3000,
+    notify: false
   });
+
+  gulp.watch(paths.html).on('change', reload);
+  gulp.watch(paths.stylus, gulp.series('styles'));
+  gulp.watch(paths.scripts, gulp.series('scripts'));
 });
 
-
-// Html Task
-// Reloads html files
-gulp.task('html', function (){
-  gulp.src('./*.html')
-      .pipe(livereload());
+// Stylus Task - Compiles stylus file
+gulp.task('stylus', function() {
+  var stylus_options = {
+    use : [     
+        rupture()
+    ]
+  }
+  
+  return gulp.src(paths.styles)
+    .pipe(stylus(stylus_options))
+    .pipe(gulp.dest(paths.css));
 });
 
-
-// Scripts Task
-// Uglifies javascript
-gulp.task('scripts', function(){
-  gulp.src('scripts/*.js')
-      .pipe(uglify())
-      .on('error', errorLog)
-      .pipe(gulp.dest('scripts/minjs/'))
-      .pipe(livereload());     
-});
-
-
-// Images Task
-// Images optimization
-gulp.task('images', function(){
-  gulp.src('img/*')
-      .pipe(imagemin())
-      .pipe(gulp.dest('img/'));
-});
-
-
-// Styles Task
-// Compile and minify stylus 
-gulp.task('styles', function(){
+// Postcss Task - Run postcss processors
+gulp.task('postcss', function() {
   var processors = [
     rucksack,
     lost,
-    autoprefixer ({browsers:['last 2 version']})
+    autoprefixer ({
+      browsers:['last 2 version']
+    })
   ];
 
-  gulp.src('css/stylus/styles.styl')
-      .pipe(stylus({
-        compress: false,
-        use: [rupture()]
-      }))
-      .pipe(postcss(processors))
-      .pipe(gulp.dest('css/'))
-      .pipe(livereload());
+  return gulp.src(paths.css + 'styles.css')
+    .pipe(postcss(processors))
+    .pipe(gulp.dest(paths.css))
 });
 
-
-// Watch Task
-// Watches files
-gulp.task('watch', function(){
-  livereload.listen();
-
-  gulp.watch('./*.html', ['html']);
-  gulp.watch('scripts/*.js', ['scripts']);
-  gulp.watch('css/stylus/*/*.styl', ['styles']);
+// Mincss - Minify style.css file
+gulp.task ('mincss', function() {
+  return gulp.src(paths.css + 'styles.css')
+    .pipe(cssmin())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(paths.css));
 });
 
-gulp.task('default', ['connect', 'scripts', 'styles', 'watch']);
+// Concatjs Task - Concatenates *.js files
+gulp.task ('concatjs', function() {
+  return gulp.src(paths.scripts)
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest(paths.js));
+});
+
+// Uglify Task - Compress *.js files
+gulp.task('uglify', function() {
+  return gulp.src(paths.js + 'main.js')
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(paths.js));
+});
+
+// Styles:watch Task - Reloads html files
+gulp.task('styles:watch', function(){
+  return gulp.src(paths.styles)
+    .pipe(reload({ stream:true }));
+});
+
+// Scripts:watch Task - Reloads html files
+gulp.task('scripts:watch', function(){
+  return gulp.src(paths.scripts)
+    .pipe(reload({ stream:true }));
+});
+
+// Optimize images
+gulp.task('images', function() {
+  return gulp.src(paths.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.img));
+});
+
+// Styles Task
+gulp.task('styles', gulp.series('stylus', 'postcss', 'mincss', 'styles:watch'));
+
+// Scripts Task
+gulp.task('scripts', gulp.series('concatjs', 'uglify', 'scripts:watch'));
+
+// Build Task
+gulp.task('build', gulp.parallel('styles', 'scripts'));
+
+// Develop Task
+gulp.task('develop', gulp.series('build', 'server'));
+
+// Production Task
+gulp.task('production', gulp.series('build', 'images', 'server'));
