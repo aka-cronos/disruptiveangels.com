@@ -461,6 +461,12 @@
 })(jQuery, window, document);
 
 $(document).ready(function () {
+  $('#burguerIcon').click(function() {
+    $( this ).toggleClass( "is-active" );
+  });
+});
+
+$(document).ready(function () {
   var $header = $('.main-header');
 
   $(window).on('scroll', function () {
