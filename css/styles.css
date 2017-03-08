@@ -363,37 +363,69 @@ figure img {
   color: #fff;
 }
 .burguerIcon {
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
-  position: relative;
-  border: 1px solid #ff6347;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.burguerIcon:focus {
+  outline: none;
 }
 .burguerIcon-inner {
-  top: 0;
+  width: 100%;
+  display: block;
+  height: 4px;
+  background: #fff;
+  position: relative;
+  transition: background 0s 0.3s;
 }
-.burguerIcon-inner,
-.burguerIcon-inner:before,
-.burguerIcon-inner:after {
+.burguerIcon-inner::before,
+.burguerIcon-inner::after {
+  position: absolute;
+  display: block;
+  left: 0;
   width: 100%;
   height: 4px;
   background-color: #fff;
-  position: absolute;
-}
-.burguerIcon-inner:before,
-.burguerIcon-inner:after {
   content: '';
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
 }
 .burguerIcon-inner:before {
-  top: 30px;
+  top: -10px;
+  transition-property: top, transform;
 }
 .burguerIcon-inner:after {
-  top: 20px;
+  bottom: -10px;
+  transition-property: bottom, transform;
+}
+.burguerIcon.is-active .burguerIcon-inner {
+  background: none;
+}
+.burguerIcon.is-active .burguerIcon-inner::after,
+.burguerIcon.is-active .burguerIcon-inner::before {
+  transition-delay: 0s, 0.3s;
+}
+.burguerIcon.is-active .burguerIcon-inner::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burguerIcon.is-active .burguerIcon-inner::after {
+  bottom: 0;
+  transform: rotate(-45deg);
 }
 .clients-logos {
   display: -ms-flexbox;

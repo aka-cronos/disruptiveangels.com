@@ -36,7 +36,7 @@ gulp.task('server', function() {
         baseDir: "./"
     },
     port: 3000,
-    notify: true
+    notify: false,
   });
 
   gulp.watch(paths.html).on('change', reload);
@@ -69,7 +69,7 @@ gulp.task('postcss', function() {
 
   return gulp.src(paths.css + 'styles.css')
     .pipe(postcss(processors))
-    .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest(paths.css));
 });
 
 // Mincss - Minify style.css file
