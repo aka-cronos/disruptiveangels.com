@@ -1,24 +1,30 @@
-.nav
+.mobileNav
+  wrapped(90%)
+  position fixed
+  top 0
+  right -100%
+  bottom 0
+  width 100%
+  padding-top 90px
+  background-color white
+  z-index 5
+  transition 350ms all ease-in-out
   
-  +below(55rem)
-    display none
-  
+  &.is-active
+    right 0
+    
   ul
-    display flex
     margin 0
     padding 0
     list-style none
-
-.nav-item
-  margin-left .75rem
-  margin-right .75rem
-
-.nav-link
+  
+.mobileNav-link
   position relative
   display block
   overflow hidden
-  padding 40px 1rem
-  color white
+  padding 2rem 1rem
+  color $principal
+  text-align center
   text-decoration none
   cursor pointer
   transition 600ms all ease
@@ -29,7 +35,7 @@
     bottom 0
     left 0
     display block
-    background-color white
+    background-color $principal
     content ''
 
   &:hover:before

@@ -462,22 +462,28 @@
 
 $(document).ready(function () {
   $('#burguerIcon').click(function() {
-    $( this ).toggleClass( "is-active" );
+    $(this).toggleClass("is-active"),
+    $('.main-header').toggleClass("is-active"),
+    $('.mobileNav').toggleClass("is-active")
   });
 });
 
 $(document).ready(function () {
-  var $header = $('.main-header');
-
-  $(window).on('scroll', function () {
-    if(!$('html').hasClass('sb-active')) {
-      $header.toggleClass('js-main-header__static',
-      $(window).scrollTop() > 0);
-    }
-  });
-
   $('#client-slider').slide({
     slideShow : true,
     speed : 3000
+  });
+});
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var $header = $('.main-header')
+    var $headerTop = $(window).scrollTop()
+
+    if ($headerTop > 1) {
+      $header.addClass('is-scrolled')
+    } else {
+      $header.removeClass('is-scrolled')
+    }
   });
 });

@@ -12,17 +12,20 @@
   border none
   cursor pointer
   background-color transparent
+  
+  +above(55rem)
+    display none
     
   &:focus
-    outline none
+    outline 0
     
 .burguerIcon-inner
   width 100%
   display block
   height 4px
-  background white
+  background-color $principal
   position relative
-  transition background 0s 0.3s
+  transition background 0s .3s
     
   &::before,
   &::after
@@ -31,11 +34,10 @@
     left 0
     width 100%
     height 4px
-    background-color #fff
+    background-color $principal
     content ''
-    transition-duration 0.3s, 0.3s
-    transition-delay 0.3s, 0s
-
+    transition-duration .3s, .3s
+    transition-delay .3s, 0s
   
   &:before
     top -10px
@@ -48,11 +50,12 @@
 .burguerIcon.is-active
   
   .burguerIcon-inner
-    background none
+    background-color transparent
     
     &::after,
     &::before
-      transition-delay 0s, 0.3s
+      transition-delay 0s, .3s
+      background-color $principal
     
     &::before
       top 0
@@ -61,32 +64,3 @@
     &::after
       bottom 0
       transform rotate(-45deg)
-  
-//   .burguerIcon-inner
-//     transform rotate(-45deg) translate3d(-5.71429px, -6px, 0)
-    
-//     &:before
-//       transform translate3d(0, 10px, 0) rotate(45deg)
-//     &:after
-//       transform translate3d(0, -20px, 0) rotate(-90deg)
-
-// /*
-//    * Slider
-//    */
-// .hamburger--slider .hamburger-inner
-//   top 2px
-//   .hamburger--slider .hamburger-inner::before
-//     top 10px
-//     transition-property transform, opacity
-//     transition-timing-function ease
-//     transition-duration 0.2s
-//   .hamburger--slider .hamburger-inner::after
-//     top 20px
-
-// .hamburger--slider.is-active .hamburger-inner
-//   transform translate3d(0, 10px, 0) rotate(45deg)
-//   .hamburger--slider.is-active .hamburger-inner::before
-//     transform rotate(-45deg) translate3d(-5.71429px, -6px, 0)
-//     opacity 0
-//   .hamburger--slider.is-active .hamburger-inner::after
-//     transform translate3d(0, -20px, 0) rotate(-90deg)
