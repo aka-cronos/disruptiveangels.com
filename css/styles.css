@@ -236,7 +236,7 @@ th {
 .title-tag,
 .member-profile-title {
   font-size: 1rem;
-  color: rgba(91,102,123,0.3);
+  color: rgba(91,102,123,0.5);
   margin-top: 0;
   margin-bottom: 2rem;
   letter-spacing: 0.4rem;
@@ -1087,8 +1087,9 @@ footer {
   -ms-flex-align: center;
       align-items: center;
   position: relative;
+}
+.startup + .startup {
   margin-top: 6rem;
-  margin-bottom: 6rem;
 }
 .startup--info {
   position: relative;
@@ -1447,7 +1448,6 @@ footer {
   background-size: cover;
 }
 .startups-container {
-  margin-top: 6rem;
   margin-bottom: 6rem;
   padding-left: calc(50% - (1120px / 2));
   padding-right: calc(50% - (1120px / 2));
