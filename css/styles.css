@@ -785,6 +785,80 @@ footer {
   display: block;
   transition: 350ms all ease-in-out;
 }
+.locations {
+  padding-left: calc(50% - (1120px / 2));
+  padding-right: calc(50% - (1120px / 2));
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+@media only screen and (max-width: 55rem) {
+  .locations {
+    display: none;
+  }
+}
+.map {
+  width: 500px;
+  height: 340px;
+  margin-right: auto;
+  margin-left: auto;
+  background: url("/img/map.svg") no-repeat center;
+  position: relative;
+}
+.map-location {
+  width: value;
+  position: absolute;
+  display: inline-block;
+}
+.map-location:hover .map-address {
+  display: block;
+}
+.map-location:hover img {
+  opacity: 1;
+}
+.map-location img {
+  width: 100%;
+  display: block;
+  opacity: 0.5;
+}
+.map-address {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+  display: none;
+  position: absolute;
+  min-width: 500px;
+  padding: 3rem;
+  top: 50%;
+  left: 200%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  text-align: center;
+  background-color: #fff;
+}
+.map-address:before {
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-right: 1rem solid #fff;
+}
+.map-monterrey {
+  top: 210px;
+  left: 205px;
+}
+.map-cdmx {
+  top: 263px;
+  left: 210px;
+}
+.map-boston {
+  top: 75px;
+  left: 390px;
+}
 .logo {
   display: block;
 }
