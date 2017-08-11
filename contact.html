@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="description" content="Our Open Innovation Processes in collaboration with large companies, help us develop new ideas and fundamentals for the creations of new tech startups">
-  <title>Innovation Process - Disruptive Angels</title>
+  <title>Disruptive Angels</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -27,8 +27,8 @@
   <meta name="msapplication-square310x310logo" content="/largetile.png" />
 </head>
 <body>
-
-  <header class="main-header is-static">
+<body>
+  <header class="main-header">
     <a href="/" class="logo logo-header">
       <svg width="165" height="59" viewBox="0 0 165 59" xmlns="http://www.w3.org/2000/svg">
         <title>Disruptive Angels Logo</title>
@@ -42,7 +42,7 @@
           <a class="nav-link" href="/">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link__active" href="innovation-process.html">INNOVATION PROCESS</a>
+          <a class="nav-link" href="innovation-process.html">INNOVATION PROCESS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="products.html">PRODUCTS</a>
@@ -54,7 +54,7 @@
           <a class="nav-link" target="_blank" href="http://blog.disruptiveangels.com/?utm_source=disruptiveangels.com&utm_medium=navbar&utm_campaign=website">BLOG</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" data-featherlight="/contact.html .contact">CONTACT</a>
+          <a class="nav-link nav-link__active" href="#" data-featherlight="/contact.html .contact">CONTACT</a>
         </li>
       </ul>
     </nav>
@@ -64,152 +64,32 @@
     </button>
   </header>
 
-  <section class="team-hero">
-    <div class="text-container">
-      <h1 class="title__main">Agile Innovation Process</h1>
-      <h3 class="title-tag">The World's best Open Innovation Process</h3>
-      <h2 class="sub-title__main">Our innovation process has helped many companies save millions, gain a competitive advantage and thrive through innovation. Our beneficiaries include Fortune 500, Mexico's top 30, and other multinational organizations.</h2>
-      <h2 class="sub-title__main">We have delivered different prototypes, concepts and alpha versions of a solution to 100% of the challenges that have been through our Innovation Process.</h2>
-    </div>
+  <section class="contact">
+    <h2 class="title">Hello there!</h2>
+    <p class="sub-title__main">Some dope text that makes them buy our shit!</p>
+
+    <div class="form-message form-message--error"></div>
+
+
+    <form  class="form form--contact" onsubmit="return sendEmail()">
+      <div class="form-inputContainer">
+        <label class="form-label" for="name">Full Name</label>
+        <input class="form-input" type="text" name="name" id="name" placeholder="Full name">
+      </div>
+
+      <div class="form-inputContainer">
+        <label class="form-label" for="mail">Email</label>
+        <input class="form-input" type="mail" name="mail" id="mail" placeholder="Work email" required>
+      </div>
+
+      <div class="form-inputContainer">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-input" name="message" id="message" placeholder="Message" cols="30" rows="5"></textarea>
+      </div>
+
+      <input class="btn btn__principal" type="submit" value="Send">
+    </form>
   </section>
-
-  <section class="steps-container">
-    <article class="dip-step step-01">
-      <div class="dip-step--info">
-        <h3 class="title">Big Company's Pains</h3>
-
-        <p class="title-tag">STEP 01</p>
-
-        <p class="text">We are certain that every single industry can be disrupted. It excites us to solve large companies problems using state of the art technology, no matter how big or how small the problems might appear.</p>
-      </div>
-
-      <figure class="dip-step--image">
-        <img src="/img/dip-step-01.jpg" alt="Münett Foto">
-      </figure>
-    </article>
-
-    <article class="dip-step step-02">
-      <div class="dip-step--info">
-        <h3 class="title">Problem finding <br> & documentation</h3>
-
-        <p class="title-tag">STEP 02</p>
-
-        <p class="text">Once we have determined the general source of the big company's needs, We start a Problem Finding process to identify the source of the issue to be solved. We document these needs as detailed as we can so we can now start our open innovation process.</p>
-      </div>
-
-      <figure class="dip-step--image">
-        <img src="/img/dip-step-02.jpg" alt="Münett Foto">
-      </figure>
-    </article>
-
-    <article class="dip-step step-03">
-      <div class="dip-step--info">
-        <h3 class="title">Open Innovation</h3>
-
-        <p class="title-tag">STEP 03</p>
-
-        <p class="text">Statistically there is more talent and knowledge outside an organization than inside. According to the company's needs, we gather a group of 30 innovators to start a process of Open Innovation/Rapid Prototyping/ Transdisciplinary collaboration, to solve the company's needs.</p>
-      </div>
-
-      <figure class="dip-step--image">
-        <img src="/img/dip-step-03.jpg" alt="Münett Foto">
-      </figure>
-    </article>
-
-    <article class="dip-step step-04">
-      <div class="dip-step--info">
-        <h3 class="title">Startups are born</h3>
-
-        <p class="title-tag">STEP 04</p>
-
-        <p class="text">Once the Innovation Process ends with different prototypes to solve the particular problems, we start a process to create a startup that will provide these solutions to the big company. Startups are being born beyond product-market-fit.  </p>
-      </div>
-
-      <figure class="dip-step--image">
-        <img src="/img/dip-step-04.jpg" alt="Münett Foto">
-      </figure>
-    </article>
-
-    <article class="dip-step step-05">
-      <div class="dip-step--info">
-        <h3 class="title">Implementation</h3>
-
-        <p class="title-tag">STEP 05</p>
-
-        <p class="text">Once the startup has been created, there is a process of crafting the product, detailing financial needs and implementing the product so the original problem has been completely solved by the startup.</p>
-      </div>
-
-      <figure class="dip-step--image">
-        <img src="/img/dip-step-05.jpg" alt="Münett Foto">
-      </figure>
-    </article>
-  </section>
-
-  <div class="separator">
-  </div>
-
-  <section class="home-press">
-    <h3 class="title">We love to work with awesome companies</h3>
-
-    <div class="clients-logos">
-      <a href="https://www.walmart.com.mx/" target="_blank">
-        <img src="/img/logo-walmart.png" alt="Logo Walmart">
-      </a>
-      <a href="http://www.ternium.com.mx/" target="_blank">
-        <img src="/img/logo-ternium.jpg" alt="Logo Ternium">
-      </a>
-      <a href="http://www.deacero.com/" target="_blank">
-        <img src="/img/logo-deacero.jpg" alt="Logo Deacero">
-      </a>
-      <a href="http://www.frisa.com/" target="_blank">
-        <img src="/img/logo-frisa.jpg" alt="Logo Frisa">
-      </a>
-      <!-- <a href="http://www.xignux.com/" target="_blank">
-        <img src="/img/logo-xignux.jpg" alt="Logo Xignux">
-      </a> -->
-      <a href="http://www.fahorro.com" target="_blank">
-        <img src="/img/logo-farmacias.jpg" alt="Logo Farmacias del ahorro">
-      </a>
-      <a href="http://www.prolecge.com/" target="_blank">
-        <img src="/img/logo-prolec-ge.jpg" alt="Logo Prolec GE">
-      </a>
-      <a href="http://www.qualtia.com.mx/" target="_blank">
-        <img src="/img/logo-qualtia.jpg" alt="Logo Qualtia Alimentos">
-      </a>
-      <a href="http://www.viakable.com/" target="_blank">
-        <img src="/img/logo-viakable.jpg" alt="Logo Viakable">
-      </a>
-      <a href="http://www.coflex.com.mx/" target="_blank">
-        <img src="/img/logo-coflex.png" alt="Logo Coflex">
-      </a>
-      <a href="http://www.katcon.com/" target="_blank">
-        <img src="/img/logo-katcon.png" alt="Logo Katcon">
-      </a>
-    </div>
-  </section>
-
-  <div class="separator">
-  </div>
-
-  <footer>
-    <p>© 2017 Disruptive Angels - All rights Reserved</p>
-
-    <div class="social">
-      <span>Follow us:</span>
-      <a class="social-icons" href="https://www.facebook.com/disruptiveangels/" target="_blank">
-        <img src="/img/icon-facebook.svg" alt="Facebook">
-      </a>
-      <a class="social-icons" href="https://twitter.com/DisruptiveAngel" target="_blank">
-        <img src="/img/icon-twitter.svg" alt="Twitter">
-      </a>
-      <a class="social-icons" href="https://github.com/DisruptiveAngels" target="_blank">
-        <img src="/img/icon-github.svg" alt="Github">
-      </a>
-      <a class="social-icons" href="https://www.instagram.com/disruptiveangels/" target="_blank">
-        <img src="/img/icon-instagram.svg" alt="Instagram">
-      </a>
-    </div>
-  </footer>
 
   <nav class="mobileNav">
     <ul>
@@ -217,7 +97,7 @@
         <a class="mobileNav-link" href="/">HOME</a>
       </li>
       <li class="mobileNav-item">
-        <a class="mobileNav-link mobileNav-link__active" href="innovation-process.html">INNOVATION PROCESS</a>
+        <a class="mobileNav-link" href="innovation-process.html">INNOVATION PROCESS</a>
       </li>
       <li class="mobileNav-item">
         <a class="mobileNav-link" href="products.html">PRODUCTS</a>
@@ -229,13 +109,11 @@
         <a class="mobileNav-link" target="_blank" href="http://blog.disruptiveangels.com/?utm_source=disruptiveangels.com&utm_medium=navbar&utm_campaign=website">BLOG</a>
       </li>
       <li class="mobileNav-item">
-        <a class="mobileNav-link" href="contact.html">CONTACT</a>
+        <a class="mobileNav-link mobileNav-link__active" href="contact.html">CONTACT</a>
       </li>
     </ul>
   </nav>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.0/release/featherlight.min.js" type="text/javascript"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

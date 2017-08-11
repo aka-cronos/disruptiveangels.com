@@ -1,0 +1,39 @@
+.form
+  margin-top 2rem
+
+.form-inputContainer
+  position relative
+  
+  & + &
+    margin-top 1rem
+    
+  & + .btn
+    margin-top 2rem
+
+.form-inputContainer
+.form-input
+  width 100%
+  
+.form-input
+  padding .75rem 1.5rem .5rem
+  border 1px solid rgba($principal, .5)
+  border-radius 5px
+  
+.form-label
+  position absolute
+  top -6px
+  left 1rem
+  padding-right .25rem
+  padding-left .25rem
+  font-size 12px
+  color $principal
+  text-transform uppercase
+  background-color white
+  
+.form-message
+  font-size 14px
+  text-transform uppercase
+  font-weight 600
+  
+  &--error
+    color $red
