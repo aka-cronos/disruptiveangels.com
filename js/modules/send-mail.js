@@ -1,7 +1,7 @@
 function sendEmail(){
   message = "Name: " + $("#name").val() + "Email: " + $("#mail").val() + "Message: " + $("#message").val();
 
-  $.post("https://formspree.io/cronos@disruptiveangels.com", {message: message})
+  $.post("https://formspree.io/federico@disruptiveangels.com", {message: message})
   .done(function() {
     $( ".contact" ).empty();
     $( ".contact" ).append( '<h2 class="title">Your message was send succesfully.</h2>' );

@@ -1623,7 +1623,7 @@ footer {
 .contact {
   -ms-flex-direction: column;
       flex-direction: column;
-  max-width: 650px;
+  max-width: 550px;
   padding: 4rem;
   text-align: center;
 }
